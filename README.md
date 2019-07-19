@@ -1,16 +1,13 @@
-# myflutter
+# 社区类app
+做的一个基于flutter的社区类app。
 
-A new Flutter project.
+目前主要完成了大体界面结构,比较完善的只有设置页面的各项跳转。
 
-## Getting Started
+如图。
 
-This project is a starting point for a Flutter application.
+![avatar](/img/Untitled.gif)
 
-A few resources to get you started if this is your first Flutter project:
+目前后端主要用的Bmob的SDK。
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+代码比较乱,因为是实习期间抽空写的,还没来得及整理～
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
