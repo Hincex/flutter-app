@@ -18,6 +18,7 @@ import 'settings/reset/reset_user_by_email.dart';
 import 'settings/userPage/userPage.dart';
 import 'settings/settings.dart';
 import './data/userData.dart';
+import './settings/userPage/message.dart';
 //Bmob后端云
 import 'package:data_plugin/bmob/bmob.dart';
 Future<int> getTheme() async {
@@ -77,6 +78,7 @@ class MyApp extends StatelessWidget {
         "/reset_email": (BuildContext context) => EmailReset(),
         "/user": (BuildContext context) => UserPage(),
         "/settings": (BuildContext context) => Settings(),
+        "/message": (BuildContext context) => MessageInfo(),
       },
     );
   }

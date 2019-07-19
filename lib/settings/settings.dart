@@ -50,7 +50,6 @@ class SettingsState extends State<Settings> {
                           style: TextStyle(fontSize: 25))),
                 ),
                 Container(
-                  margin: EdgeInsets.only(right: 70),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -73,6 +72,7 @@ class SettingsState extends State<Settings> {
                   ),
                 ),
                 Container(
+                  margin: EdgeInsets.only(left: 70),
                   child: Icon(Icons.chevron_right),
                 )
               ],
@@ -94,7 +94,7 @@ class SettingsState extends State<Settings> {
                         '消息',
                         '1',
                         () {
-                          PublicFunc.navTo('/announce', context);
+                          PublicFunc.navTo('/message', context);
                         },
                       ),
                       info(

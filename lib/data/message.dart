@@ -1,22 +1,27 @@
+import 'package:data_plugin/bmob/bmob_utils.dart';
 import 'package:data_plugin/bmob/table/bmob_object.dart';
 import 'package:data_plugin/bmob/table/bmob_user.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:data_plugin/bmob/bmob_dio.dart';
 import 'package:data_plugin/bmob/bmob.dart';
-part 'announce.g.dart';
+import 'package:data_plugin/bmob/response/bmob_updated.dart';
+import 'package:data_plugin/bmob/response/bmob_error.dart';
+
+part 'message.g.dart';
 
 @JsonSerializable()
-class Announce extends BmobObject {
-  factory Announce.fromJson(Map<String, dynamic> json) =>
-      _$AnnounceFromJson(json);
+class Message extends BmobObject {
+  factory Message.fromJson(Map<String, dynamic> json) =>
+      _$MessageFromJson(json);
 
-  Map<String, dynamic> toJson() => _$AnnounceToJson(this);
+  Map<String, dynamic> toJson() => _$MessageToJson(this);
 
-  String author;
-  String title;
+  String username;
   String content;
+  String author;
+  bool read;
 
-  Announce();
+  Message();
 
   @override
   Map getParams() {

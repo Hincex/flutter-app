@@ -72,12 +72,12 @@ class ClubState extends State<Club> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   //标题
-                  Container(
-                    margin: EdgeInsets.only(bottom: 10),
-                    child: Center(
-                      child: Text('社区列表', style: (TextStyle(fontSize: 30))),
-                    ),
-                  ),
+                  // Container(
+                  //   margin: EdgeInsets.only(bottom: 10),
+                  //   child: Center(
+                  //     child: Text('社区列表', style: (TextStyle(fontSize: 30))),
+                  //   ),
+                  // ),
                   //列表
                   Container(
                     child: GridView.count(

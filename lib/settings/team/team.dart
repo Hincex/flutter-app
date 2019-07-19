@@ -55,7 +55,8 @@ class TeamState extends State<Team> {
           child: ListView(
             children: <Widget>[
               Stack(
-                alignment: Alignment(0, 35),
+                overflow: Overflow.visible,
+                // alignment: Alignment(5,5),
                 children: <Widget>[
                   Container(
                     padding: EdgeInsets.all(20),
@@ -68,7 +69,7 @@ class TeamState extends State<Team> {
                         Container(
                           child: Text(
                             'V1.0.0',
-                            style: TextStyle(fontSize: 40, color: Colors.white),
+                            style: TextStyle(fontSize: 30, color: Colors.white),
                           ),
                         ),
                         Container(
@@ -81,17 +82,27 @@ class TeamState extends State<Team> {
                       ],
                     ),
                   ),
-                  Container(
-                    margin: EdgeInsets.all(20),
-                    child: PublicFunc.commonCard(Column(
-                      children: <Widget>[
-                        listItem('作者', 'Vince He', Icon(Icons.pages),
-                            Icon(Icons.chevron_right)),
-                        listItem('特别鸣谢', 'Google Inc.', Icon(Icons.pages),
-                            Icon(Icons.chevron_right))
-                      ],
-                    )),
-                  ),
+                  Positioned(
+                    left: 0.0,
+                    right: 0.0,
+                    top: 60.0,
+                    child: Container(
+                      height: 240,
+                      margin: EdgeInsets.all(20),
+                      child: PublicFunc.commonCard(Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          listItem('作者', 'Vince He', Icon(Icons.offline_bolt),
+                              Icon(Icons.chevron_right)),
+                          listItem('UI设计', '李丽莎', Icon(Icons.palette),
+                              Icon(Icons.chevron_right)),
+                          listItem('特别鸣谢', 'Google Inc.', Icon(Icons.pages),
+                              Icon(Icons.chevron_right))
+                        ],
+                      )),
+                    ),
+                  )
                 ],
               )
             ],

@@ -36,6 +36,7 @@ class _UserPageState extends State<UserPage> {
       bmobQuery.setInclude("author");
       bmobQuery.queryObject(UsrData.usrId).then((data) {
         PublicFunc.loading = false;
+        setState(() {});
         User user = User.fromJson(data);
         setState(() {
           usrName = user.username == null ? '请登录' : user.username;
@@ -45,6 +46,7 @@ class _UserPageState extends State<UserPage> {
         // showSuccess(context, "查询一条数据成功：$user");
       }).catchError((e) {
         PublicFunc.loading = false;
+        setState(() {});
         Toast.show('数据获取失败!', context,
             duration: Toast.LENGTH_SHORT, gravity: Toast.CENTER);
         // showError(context, BmobError.convert(e).error);

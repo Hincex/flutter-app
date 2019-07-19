@@ -1,4 +1,6 @@
+import 'package:data_plugin/bmob/bmob.dart';
 import 'package:data_plugin/bmob/bmob_query.dart';
+import 'package:data_plugin/bmob/bmob_utils.dart';
 import 'package:data_plugin/bmob/response/bmob_error.dart';
 import 'package:data_plugin/bmob/response/bmob_saved.dart';
 import 'package:data_plugin/bmob/table/bmob_user.dart';
@@ -43,13 +45,13 @@ class ChatMessage extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: <Widget>[
                               //昵称
-                              Container(
-                                child: Text(_name,
-                                    style: Theme.of(context).textTheme.subhead),
-                              ),
+                              // Container(
+                              //   child: Text(_name,
+                              //       style: Theme.of(context).textTheme.subhead),
+                              // ),
                               //发送内容
                               Container(
-                                margin: const EdgeInsets.only(top: 10.0),
+                                // margin: const EdgeInsets.only(top: 10.0),
                                 child: Text(text),
                               )
                             ],
@@ -149,12 +151,11 @@ class AdviceWidgetState extends State<AdviceWidget>
     query.addWhereEqualTo("user", UsrData.usrName);
     query.queryObjects().then((data) {
       PublicFunc.loading = false;
+      setState(() {});
       // showSuccess(context, data.toString());
       List<Advice> advices = data.map((i) => Advice.fromJson(i)).toList();
       for (Advice advice in advices) {
         if (advice != null) {
-          print(advice.user);
-          print(advice.content);
           ChatMessage message = ChatMessage(
               text: advice.content,
               animationController: AnimationController(
@@ -167,6 +168,7 @@ class AdviceWidgetState extends State<AdviceWidget>
       }
     }).catchError((e) {
       PublicFunc.loading = false;
+      setState(() {});
       showError(context, BmobError.convert(e).error);
     });
   }
@@ -192,6 +194,7 @@ class AdviceWidgetState extends State<AdviceWidget>
     Advice advice = Advice();
     advice.user = UsrData.usrName;
     advice.content = text;
+    print(BmobUtils.getTableName(advice));
     if (_time == 3) {
       Toast.show('你已经连发了三条了,谢谢你的建议但请你考虑一下服务器的负荷哦~', context,
           duration: Toast.LENGTH_LONG, gravity: Toast.CENTER);
@@ -301,6 +304,7 @@ class AdviceWidgetState extends State<AdviceWidget>
       home: Scaffold(
           appBar: AppBar(
             title: Text('意见反馈'),
+            elevation: 0,
             leading: IconButton(
               highlightColor: Colors.transparent,
               splashColor: Colors.transparent,

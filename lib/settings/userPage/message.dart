@@ -1,3 +1,4 @@
+import 'package:IVAT/data/userData.dart';
 import 'package:IVAT/public_func/PublicFunc.dart';
 import 'package:flutter/material.dart';
 import 'package:toast/toast.dart';
@@ -7,10 +8,11 @@ import 'package:data_plugin/bmob/bmob_query.dart';
 import '../../data/announce.dart';
 import 'package:data_plugin/utils/dialog_util.dart';
 import 'package:data_plugin/bmob/response/bmob_error.dart';
+import '../../data/message.dart';
 
-class AnnounceInfo extends StatefulWidget {
+class MessageInfo extends StatefulWidget {
   @override
-  AnnounceInfoState createState() => AnnounceInfoState();
+  MessageInfoState createState() => MessageInfoState();
 }
 
 final List<ChatMessage> _messages = <ChatMessage>[];
@@ -51,10 +53,10 @@ class ChatMessage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: <Widget>[
-                              Container(
-                                child:
-                                    Text(title, style: TextStyle(fontSize: 18)),
-                              ),
+                              // Container(
+                              //   child:
+                              //       Text(title, style: TextStyle(fontSize: 18)),
+                              // ),
                               Container(
                                 margin: EdgeInsets.fromLTRB(0, 10, 0, 10),
                                 child: Text('$content',
@@ -74,24 +76,21 @@ class ChatMessage extends StatelessWidget {
   }
 }
 
-class AnnounceInfoState extends State<AnnounceInfo> {
-  ///查询数据
+class MessageInfoState extends State<MessageInfo> {
+  ///等于条件查询
   void _queryWhereEqual(BuildContext context) {
-    BmobQuery<Announce> query = BmobQuery();
+    BmobQuery<Message> query = BmobQuery();
+    query.addWhereEqualTo("username", UsrData.usrName);
     query.queryObjects().then((data) {
       PublicFunc.loading = false;
       setState(() {});
       // showSuccess(context, data.toString());
-      List<Announce> msgs = data.map((i) => Announce.fromJson(i)).toList();
-      for (Announce msg in msgs) {
+      List<Message> messages = data.map((i) => Message.fromJson(i)).toList();
+      for (Message msg in messages) {
         if (msg != null) {
           setState(() {
             _messages.insert(
-                0,
-                ChatMessage(
-                    title: msg.title,
-                    author: msg.author,
-                    content: msg.content));
+                0, ChatMessage(author: msg.author, content: msg.content));
           });
         }
       }
@@ -100,17 +99,6 @@ class AnnounceInfoState extends State<AnnounceInfo> {
       setState(() {});
       showError(context, BmobError.convert(e).error);
     });
-  }
-
-  //列表项
-  ListTile listItem(
-      String title, String subtitle, Widget leftIcon, Widget rightIcon) {
-    return ListTile(
-      title: Text('$title'),
-      subtitle: Text('$subtitle'),
-      leading: leftIcon,
-      trailing: rightIcon,
-    );
   }
 
   @override
@@ -153,8 +141,8 @@ class AnnounceInfoState extends State<AnnounceInfo> {
       theme: GlobalConfig.themeData,
       home: Scaffold(
         appBar: AppBar(
-          title: Text('通知公告'),
           elevation: 0,
+          title: Text('消息'),
           leading: IconButton(
             highlightColor: Colors.transparent,
             splashColor: Colors.transparent,
