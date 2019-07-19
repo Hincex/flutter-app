@@ -1,0 +1,9 @@
+<<<<<<< HEAD
+#Wed Jul 17 18:25:34 CST 2019
+base.0=/Users/vincehe/flutter/MyFlutterTestApp/build/app/intermediates/transforms/dexMerger/release/0
+=======
+#Wed Jul 17 21:31:58 CST 2019
+base.0=E\:\\Flutter\\MyFlutterTestApp\\build\\app\\intermediates\\transforms\\dexMerger\\release\\0
+>>>>>>> e0fa3f2e28b1414204c69168b99ce69b8f30a144
+path.0=classes.dex
+renamed.0=classes.dex

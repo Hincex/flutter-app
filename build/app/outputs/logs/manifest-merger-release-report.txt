@@ -1,0 +1,187 @@
+-- Merging decision tree log ---
+manifest
+ADDED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml:1:1-37:12
+INJECTED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml:1:1-37:12
+INJECTED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml:1:1-37:12
+INJECTED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml:1:1-37:12
+MERGED from [:shared_preferences] E:\Flutter\MyFlutterTestApp\build\shared_preferences\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:2:1-7:12
+MERGED from [:permission_handler] E:\Flutter\MyFlutterTestApp\build\permission_handler\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:2:1-7:12
+MERGED from [:flutter_picker] E:\Flutter\MyFlutterTestApp\build\flutter_picker\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:2:1-7:12
+MERGED from [:device_info] E:\Flutter\MyFlutterTestApp\build\device_info\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:2:1-7:12
+MERGED from [:data_plugin] E:\Flutter\MyFlutterTestApp\build\data_plugin\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.appcompat:appcompat:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\appcompat-1.0.0-beta01.aar\c4cdd2773702c22a6c131df8b18b099b\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\fragment-1.0.0-beta01.aar\10659bc66b4876b95352b3da1eeb8d9f\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\vectordrawable-animated-1.0.0-beta01.aar\a96aadebabb6834e344146d562f996c6\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\legacy-support-core-ui-1.0.0-beta01.aar\056d97badeeb0c9f053f44e511f740c3\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\legacy-support-core-utils-1.0.0-beta01.aar\ed9b001eb7a51227df96fccc02f259d3\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\vectordrawable-1.0.0-beta01.aar\5ffc8f7885be2cc9010c584b69b3c52f\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\loader-1.0.0-beta01.aar\71fd8fcb5151eec1f04383b159ef711e\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\viewpager-1.0.0-beta01.aar\6eb1fada6f04cef6f4ebe97b4f298234\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-1.0.0-beta01.aar\291a0ecc92ddb8c2d2e6c32cf0a366de\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\drawerlayout-1.0.0-beta01.aar\ca735c5a5b9a0877117569a94e8309fa\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-1.0.0-beta01.aar\299f91a84a01a6dab23f58784f2d6750\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\customview-1.0.0-beta01.aar\c39da59f279b6f17fb1334aabeba0623\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-1.0.0-beta01.aar\398bb67650b9419caebd84b948a15ece\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-1.0.0-beta01.aar\d2a9800d9c6a0defd161d6a2b14e758f\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.0.2] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\core-1.0.2.aar\37c8ec18cd117b632fb9b921d16a01f7\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.0.0.aar\0e2315ed2612294968858764623002f9\AndroidManifest.xml:17:1-25:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.0.0.aar\ff47ae8e01b3a7da7fac1703a90639a6\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0-beta01.aar\a2c9f306a2550a80b9a5dddcaf0fee59\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-core-2.0.0-beta01.aar\b91dd67c922a9bed891b8a0a14388d1b\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\core-runtime-2.0.0-beta01.aar\aa397711e6e0f7724dbd63be8ac711f7\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\documentfile-1.0.0-beta01.aar\96c74ca1ef5ef6652bcd0d7cc379af38\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-1.0.0-beta01.aar\b705021b6089fcc869c8d0290105c47d\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\print-1.0.0-beta01.aar\982c01b5c79048e3a214c3dc802b54ee\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\interpolator-1.0.0-beta01.aar\adf8db8fd5c08cb4c9e24c27eea7a17d\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-2.0.0-beta01.aar\f60ad7172309f1dde8415f91a3c6193f\AndroidManifest.xml:17:1-22:12
+INJECTED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml:1:1-37:12
+INJECTED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml:1:1-37:12
+INJECTED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml:1:1-37:12
+	package
+		ADDED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml:2:5-33
+		INJECTED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml
+		ADDED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml:1:1-37:12
+		INJECTED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml
+		ADDED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml:1:1-37:12
+		INJECTED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml:1:11-69
+application
+ADDED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml:9:5-32:19
+MERGED from [androidx.core:core:1.0.2] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\core-1.0.2.aar\37c8ec18cd117b632fb9b921d16a01f7\AndroidManifest.xml:22:5-89
+MERGED from [androidx.core:core:1.0.2] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\core-1.0.2.aar\37c8ec18cd117b632fb9b921d16a01f7\AndroidManifest.xml:22:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.0.0.aar\0e2315ed2612294968858764623002f9\AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.0.0.aar\0e2315ed2612294968858764623002f9\AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.0.2] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\core-1.0.2.aar\37c8ec18cd117b632fb9b921d16a01f7\AndroidManifest.xml:22:18-86
+	android:label
+		ADDED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml:11:9-29
+	android:icon
+		ADDED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml:12:9-43
+	android:name
+		ADDED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml:10:9-57
+activity#com.ivat.myflutter.MainActivity
+ADDED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml:13:9-31:20
+	android:launchMode
+		ADDED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml:15:13-43
+	android:hardwareAccelerated
+		ADDED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml:18:13-47
+	android:windowSoftInputMode
+		ADDED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml:19:13-55
+	android:configChanges
+		ADDED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml:17:13-144
+	android:theme
+		ADDED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml:16:13-47
+	android:name
+		ADDED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml:14:13-41
+meta-data#io.flutter.app.android.SplashScreenUntilFirstFrame
+ADDED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml:24:13-26:40
+	android:value
+		ADDED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml:26:17-37
+	android:name
+		ADDED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml:25:17-82
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml:27:13-30:29
+action#android.intent.action.MAIN
+ADDED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml:28:17-68
+	android:name
+		ADDED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml:28:25-66
+category#android.intent.category.LAUNCHER
+ADDED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml:29:17-76
+	android:name
+		ADDED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml:29:27-74
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml:33:5-75
+	android:name
+		ADDED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml:33:22-72
+uses-permission#android.permission.INTERNET
+ADDED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml:34:5-67
+	android:name
+		ADDED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml:34:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml:35:5-79
+	android:name
+		ADDED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml:35:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml:36:5-76
+	android:name
+		ADDED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml:36:22-73
+uses-sdk
+INJECTED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml
+INJECTED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml
+MERGED from [:shared_preferences] E:\Flutter\MyFlutterTestApp\build\shared_preferences\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences] E:\Flutter\MyFlutterTestApp\build\shared_preferences\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:permission_handler] E:\Flutter\MyFlutterTestApp\build\permission_handler\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:permission_handler] E:\Flutter\MyFlutterTestApp\build\permission_handler\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:flutter_picker] E:\Flutter\MyFlutterTestApp\build\flutter_picker\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:flutter_picker] E:\Flutter\MyFlutterTestApp\build\flutter_picker\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:device_info] E:\Flutter\MyFlutterTestApp\build\device_info\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:device_info] E:\Flutter\MyFlutterTestApp\build\device_info\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:data_plugin] E:\Flutter\MyFlutterTestApp\build\data_plugin\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:data_plugin] E:\Flutter\MyFlutterTestApp\build\data_plugin\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\appcompat-1.0.0-beta01.aar\c4cdd2773702c22a6c131df8b18b099b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\appcompat-1.0.0-beta01.aar\c4cdd2773702c22a6c131df8b18b099b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\fragment-1.0.0-beta01.aar\10659bc66b4876b95352b3da1eeb8d9f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\fragment-1.0.0-beta01.aar\10659bc66b4876b95352b3da1eeb8d9f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\vectordrawable-animated-1.0.0-beta01.aar\a96aadebabb6834e344146d562f996c6\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\vectordrawable-animated-1.0.0-beta01.aar\a96aadebabb6834e344146d562f996c6\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\legacy-support-core-ui-1.0.0-beta01.aar\056d97badeeb0c9f053f44e511f740c3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\legacy-support-core-ui-1.0.0-beta01.aar\056d97badeeb0c9f053f44e511f740c3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\legacy-support-core-utils-1.0.0-beta01.aar\ed9b001eb7a51227df96fccc02f259d3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\legacy-support-core-utils-1.0.0-beta01.aar\ed9b001eb7a51227df96fccc02f259d3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\vectordrawable-1.0.0-beta01.aar\5ffc8f7885be2cc9010c584b69b3c52f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\vectordrawable-1.0.0-beta01.aar\5ffc8f7885be2cc9010c584b69b3c52f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\loader-1.0.0-beta01.aar\71fd8fcb5151eec1f04383b159ef711e\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\loader-1.0.0-beta01.aar\71fd8fcb5151eec1f04383b159ef711e\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\viewpager-1.0.0-beta01.aar\6eb1fada6f04cef6f4ebe97b4f298234\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\viewpager-1.0.0-beta01.aar\6eb1fada6f04cef6f4ebe97b4f298234\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-1.0.0-beta01.aar\291a0ecc92ddb8c2d2e6c32cf0a366de\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-1.0.0-beta01.aar\291a0ecc92ddb8c2d2e6c32cf0a366de\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\drawerlayout-1.0.0-beta01.aar\ca735c5a5b9a0877117569a94e8309fa\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\drawerlayout-1.0.0-beta01.aar\ca735c5a5b9a0877117569a94e8309fa\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-1.0.0-beta01.aar\299f91a84a01a6dab23f58784f2d6750\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-1.0.0-beta01.aar\299f91a84a01a6dab23f58784f2d6750\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\customview-1.0.0-beta01.aar\c39da59f279b6f17fb1334aabeba0623\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\customview-1.0.0-beta01.aar\c39da59f279b6f17fb1334aabeba0623\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-1.0.0-beta01.aar\398bb67650b9419caebd84b948a15ece\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-1.0.0-beta01.aar\398bb67650b9419caebd84b948a15ece\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-1.0.0-beta01.aar\d2a9800d9c6a0defd161d6a2b14e758f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-1.0.0-beta01.aar\d2a9800d9c6a0defd161d6a2b14e758f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.2] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\core-1.0.2.aar\37c8ec18cd117b632fb9b921d16a01f7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.2] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\core-1.0.2.aar\37c8ec18cd117b632fb9b921d16a01f7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.0.0.aar\0e2315ed2612294968858764623002f9\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.0.0.aar\0e2315ed2612294968858764623002f9\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.0.0.aar\ff47ae8e01b3a7da7fac1703a90639a6\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.0.0.aar\ff47ae8e01b3a7da7fac1703a90639a6\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0-beta01.aar\a2c9f306a2550a80b9a5dddcaf0fee59\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0-beta01.aar\a2c9f306a2550a80b9a5dddcaf0fee59\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-core-2.0.0-beta01.aar\b91dd67c922a9bed891b8a0a14388d1b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-core-2.0.0-beta01.aar\b91dd67c922a9bed891b8a0a14388d1b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\core-runtime-2.0.0-beta01.aar\aa397711e6e0f7724dbd63be8ac711f7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\core-runtime-2.0.0-beta01.aar\aa397711e6e0f7724dbd63be8ac711f7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\documentfile-1.0.0-beta01.aar\96c74ca1ef5ef6652bcd0d7cc379af38\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\documentfile-1.0.0-beta01.aar\96c74ca1ef5ef6652bcd0d7cc379af38\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-1.0.0-beta01.aar\b705021b6089fcc869c8d0290105c47d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-1.0.0-beta01.aar\b705021b6089fcc869c8d0290105c47d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\print-1.0.0-beta01.aar\982c01b5c79048e3a214c3dc802b54ee\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\print-1.0.0-beta01.aar\982c01b5c79048e3a214c3dc802b54ee\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\interpolator-1.0.0-beta01.aar\adf8db8fd5c08cb4c9e24c27eea7a17d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\interpolator-1.0.0-beta01.aar\adf8db8fd5c08cb4c9e24c27eea7a17d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-2.0.0-beta01.aar\f60ad7172309f1dde8415f91a3c6193f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0-beta01] C:\Users\Vince\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-2.0.0-beta01.aar\f60ad7172309f1dde8415f91a3c6193f\AndroidManifest.xml:20:5-44
+INJECTED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml
+INJECTED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml
+		ADDED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml
+		ADDED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Flutter\MyFlutterTestApp\android\app\src\main\AndroidManifest.xml
