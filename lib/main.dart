@@ -58,8 +58,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //初始化Bmob
-    Bmob.initMasterKey("8cb37d6ed5a5b2d4734958772e340ff4",
-        "70e70bc0d8707968571ff9e3bdbddecd", "b8fa07f76392288461e01f106b954112");
+    Bmob.initMasterKey("",
+        "", "");
     return MaterialApp(
       title: '电气协会',
       theme: GlobalConfig.themeData,
