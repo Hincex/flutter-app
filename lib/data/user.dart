@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:data_plugin/bmob/table/bmob_user.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:data_plugin/bmob/bmob_dio.dart';
@@ -18,6 +20,7 @@ class User extends BmobUser {
   String job;
   String school;
   bool confirm;
+  File avatar;
   User();
 
   ///修改一条数据

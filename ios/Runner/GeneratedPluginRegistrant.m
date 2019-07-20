@@ -6,6 +6,7 @@
 #import <data_plugin/DataPlugin.h>
 #import <device_info/DeviceInfoPlugin.h>
 #import <flutter_picker/FlutterPickerPlugin.h>
+#import <image_picker/ImagePickerPlugin.h>
 #import <permission_handler/PermissionHandlerPlugin.h>
 #import <shared_preferences/SharedPreferencesPlugin.h>
 
@@ -15,6 +16,7 @@
   [DataPlugin registerWithRegistrar:[registry registrarForPlugin:@"DataPlugin"]];
   [FLTDeviceInfoPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTDeviceInfoPlugin"]];
   [FlutterPickerPlugin registerWithRegistrar:[registry registrarForPlugin:@"FlutterPickerPlugin"]];
+  [FLTImagePickerPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTImagePickerPlugin"]];
   [PermissionHandlerPlugin registerWithRegistrar:[registry registrarForPlugin:@"PermissionHandlerPlugin"]];
   [FLTSharedPreferencesPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTSharedPreferencesPlugin"]];
 }

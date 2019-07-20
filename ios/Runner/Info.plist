@@ -32,6 +32,12 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>请求获取图库信息</string>
+	<key>NSCameraUsageDescription</key>
+	<string>请求获取相机信息</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>请求获取麦克风信息</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

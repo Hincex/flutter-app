@@ -24,7 +24,8 @@ User _$UserFromJson(Map<String, dynamic> json) {
     ..nickname = json['nickname'] as String
     ..school = json['school'] as String
     ..job = json['job'] as String
-    ..confirm = json['confirm'] as bool;
+    ..confirm = json['confirm'] as bool
+    ..avatar = json['avatar'] as File;
 }
 
 Map<String, dynamic> _$UserToJson(User instance) => <String, dynamic>{
@@ -45,4 +46,5 @@ Map<String, dynamic> _$UserToJson(User instance) => <String, dynamic>{
       'school': instance.school,
       'job': instance.job,
       'confirm': instance.confirm,
+      'avatar': instance.avatar,
     };

@@ -21,6 +21,7 @@ import './data/userData.dart';
 import './settings/userPage/message.dart';
 //Bmob后端云
 import 'package:data_plugin/bmob/bmob.dart';
+
 Future<int> getTheme() async {
   SharedPreferences pref = await SharedPreferences.getInstance();
   int themeIndex = pref.getInt("localTheme");
@@ -30,7 +31,8 @@ Future<int> getTheme() async {
     UsrData.usrJob = pref.getString('user_job');
   if (pref.getString('user_id') != null)
     UsrData.usrId = pref.getString('user_id');
-  print(themeIndex);
+  if (pref.getBool('isGrid') != null) UsrData.isGrid = pref.getBool('isGrid');
+  // print(themeIndex);
   if (themeIndex != null) {
     GlobalConfig.themeData = GlobalConfig.themes[themeIndex];
     GlobalConfig.tempThemeData = GlobalConfig.themes[themeIndex];

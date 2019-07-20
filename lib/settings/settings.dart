@@ -1,8 +1,11 @@
 import 'package:IVAT/data/user.dart';
-import 'package:data_plugin/bmob/bmob_dio.dart';
-import 'package:data_plugin/bmob/table/bmob_user.dart';
+import 'package:data_plugin/bmob/bmob_file_manager.dart';
+import 'package:data_plugin/bmob/type/bmob_file.dart';
+import 'package:data_plugin/data_plugin.dart';
+// import 'package:data_plugin/bmob/bmob_dio.dart';
+// import 'package:data_plugin/bmob/table/bmob_user.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
+// import 'package:flutter/painting.dart';
 import 'package:toast/toast.dart';
 import '../global_config.dart' show GlobalConfig; //全局设置
 import 'settings_config.dart' show SettingConfig; //设置界面变量
@@ -11,16 +14,16 @@ import '../store/model/index.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../public_func/PublicFunc.dart';
 import '../data/userData.dart';
+import 'dart:io';
 import 'dart:async';
 import '../data/confirm.dart';
 import 'package:data_plugin/bmob/bmob_query.dart';
 import 'package:data_plugin/utils/dialog_util.dart';
 import 'package:data_plugin/bmob/response/bmob_error.dart';
 import 'package:data_plugin/bmob/response/bmob_updated.dart';
+import 'package:image_picker/image_picker.dart';
 
 final TextEditingController _controller = TextEditingController();
-
-String _confirmCode;
 
 class Settings extends StatefulWidget {
   @override
@@ -29,6 +32,51 @@ class Settings extends StatefulWidget {
 
 //界面构造
 class SettingsState extends State<Settings> {
+  var _imgPath;
+  String _url;
+  BmobFile _bmobFile;
+
+  ///上传文件，上传文件涉及到android的文件访问权限，调用此方法前需要开发者们先适配好应用在各个android版本的权限管理。
+  _uploadFile(String path) {
+    if (path == null) {
+      DataPlugin.toast("请先选择文件");
+      return;
+    }
+    DataPlugin.toast("上传中，请稍候……");
+    File file = new File(path);
+    BmobFileManager.upload(file).then((BmobFile bmobFile) {
+      _bmobFile = bmobFile;
+      _url = bmobFile.url;
+      print("${bmobFile.cdn}\n${bmobFile.url}\n${bmobFile.filename}");
+      DataPlugin.toast(
+          "上传成功：${bmobFile.cdn}\n${bmobFile.url}\n${bmobFile.filename}");
+    }).catchError((e) {
+      showError(context, BmobError.convert(e).error);
+    });
+  }
+
+/*拍照*/
+  Future _takePhoto() async {
+    var image = await ImagePicker.pickImage(source: ImageSource.camera);
+    print(image);
+    setState(() {
+      _imgPath = image;
+    });
+  }
+
+  /*相册*/
+  Future _openGallery() async {
+    var image = await ImagePicker.pickImage(source: ImageSource.gallery);
+    setState(() {
+      _imgPath = image;
+    });
+    //开始上传头像
+    if (_imgPath != null) {
+      print(_imgPath.path);
+      _uploadFile(_imgPath.path);
+    }
+  }
+
   //个人卡片
   Container infoCard(BuildContext context) {
     return Container(
@@ -38,48 +86,108 @@ class SettingsState extends State<Settings> {
         crossAxisAlignment: CrossAxisAlignment.center,
         // mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
-          FlatButton(
-            child: Row(
-              children: <Widget>[
-                Container(
-                  margin: EdgeInsets.only(right: 30),
-                  child: CircleAvatar(
-                      minRadius: 20,
-                      maxRadius: 25,
-                      child: Text(UsrData.usrName[0],
-                          style: TextStyle(fontSize: 25))),
-                ),
-                Container(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      //用户名
-                      Container(
-                        child: Text(
-                          UsrData.usrName,
-                          style: TextStyle(fontSize: 25),
-                        ),
+          Row(
+            children: <Widget>[
+              Container(
+                margin: EdgeInsets.only(right: 40),
+                child: CircleAvatar(
+                    backgroundImage:
+                        _imgPath == null ? null : FileImage(_imgPath),
+                    minRadius: 20,
+                    maxRadius: 25,
+                    child: FlatButton(
+                        padding: EdgeInsets.all(0),
+                        child: _imgPath == null
+                            ? Text(UsrData.usrName[0],
+                                style: TextStyle(
+                                    fontSize: 25, color: Colors.white))
+                            : null,
+                        highlightColor: Colors.transparent,
+                        splashColor: Colors.transparent,
+                        onPressed: () {
+                          showDialog<Null>(
+                            context: context,
+                            barrierDismissible: true,
+                            builder: (BuildContext context) {
+                              return SimpleDialog(
+                                  backgroundColor: GlobalConfig.dark
+                                      ? ThemeData.dark().backgroundColor
+                                      : Colors.white,
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius:
+                                          BorderRadius.circular(15.0)),
+                                  title: Text(
+                                    '上传你的头像',
+                                    style: TextStyle(
+                                        color: GlobalConfig.dark
+                                            ? Colors.white
+                                            : Colors.black),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                  children: <Widget>[
+                                    ListTile(
+                                      title: Text('拍照',
+                                          style: TextStyle(
+                                              color: GlobalConfig.dark
+                                                  ? Colors.white
+                                                  : Colors.black)),
+                                      trailing: Icon(Icons.camera),
+                                      onTap: () {
+                                        _takePhoto();
+                                      },
+                                    ),
+                                    ListTile(
+                                      title: Text('图库',
+                                          style: TextStyle(
+                                              color: GlobalConfig.dark
+                                                  ? Colors.white
+                                                  : Colors.black)),
+                                      trailing: Icon(Icons.photo),
+                                      onTap: () {
+                                        _openGallery();
+                                      },
+                                    ),
+                                  ]);
+                            },
+                          );
+                        })),
+              ),
+              FlatButton(
+                onPressed: () {
+                  PublicFunc.navTo('/user', context);
+                },
+                child: Row(
+                  children: <Widget>[
+                    Container(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          //用户名
+                          Container(
+                            child: Text(
+                              UsrData.usrName,
+                              style: TextStyle(fontSize: 25),
+                            ),
+                          ),
+                          //其他
+                          Container(
+                            child: Text(
+                              UsrData.usrJob,
+                              style: TextStyle(fontSize: 12),
+                            ),
+                          ),
+                        ],
                       ),
-                      //其他
-                      Container(
-                        child: Text(
-                          UsrData.usrJob,
-                          style: TextStyle(fontSize: 12),
-                        ),
-                      ),
-                    ],
-                  ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(left: 60),
+                      child: Icon(Icons.chevron_right),
+                    )
+                  ],
                 ),
-                Container(
-                  margin: EdgeInsets.only(left: 70),
-                  child: Icon(Icons.chevron_right),
-                )
-              ],
-            ),
-            onPressed: () {
-              PublicFunc.navTo('/user', context);
-            },
+              )
+            ],
           ),
           Container(
             margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
@@ -309,6 +417,8 @@ class SettingsState extends State<Settings> {
   }
 
   _buildConfirmCode(BuildContext context) {
+    String _confirmCode;
+
     ///查询数据
     void _queryWhereEqual(BuildContext context) {
       if (_confirmCode != null) {
@@ -432,6 +542,7 @@ class SettingsState extends State<Settings> {
                 if (confirm != null && confirm == false) {
                   _buildConfirmCode(context);
                 } else {
+                  // showToast('你已认证过',position:ToastPosition.bottom);
                   Toast.show('你已认证过!', context,
                       duration: Toast.LENGTH_SHORT, gravity: Toast.CENTER);
                 }
