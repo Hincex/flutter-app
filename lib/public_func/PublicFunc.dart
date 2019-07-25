@@ -22,6 +22,7 @@ class PublicFunc {
   //分别是上下文，传递参数
   static void back(BuildContext context, [Object params]) {
     Navigator.of(context).pop(params);
+    loading = false;
   }
 
   //页面跳转
@@ -108,6 +109,7 @@ class PublicFunc {
         margin: SettingConfig.cardMargin,
         elevation: SettingConfig.customElevation, //设置阴影
         shape: SettingConfig.cardShape,
+        clipBehavior: Clip.hardEdge,
         child: widget); //包含的组件
   }
 }

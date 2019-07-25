@@ -18,7 +18,9 @@ class Community extends BmobObject {
   Map<String, dynamic> toJson() => _$CommunityToJson(this);
 
   String community_name;
-  FileImage img;
+  String description;
+  String data_name;
+  String img;
 
   Community();
 

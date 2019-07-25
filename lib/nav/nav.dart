@@ -48,7 +48,10 @@ class NavState extends State<Nav> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _currentPage,
+      body: IndexedStack(
+        children: <Widget>[Home(), Club(), Settings()],
+        index: _currentIndex,
+      ),
       bottomNavigationBar: CurvedNavigationBar(
           color: Provider.of<ThemeChange>(context).navcolor,
           height: 65.0,
@@ -57,7 +60,7 @@ class NavState extends State<Nav> with TickerProviderStateMixin {
           items: <Widget>[
             Icon(Icons.home, size: 30, color: iconColor[0]),
             // Icon(Icons.people, size: 30, color: iconColor[1]),
-            Icon(Icons.message, size: 30, color: iconColor[1]),
+            Icon(Icons.book, size: 30, color: iconColor[1]),
             Icon(Icons.settings, size: 30, color: iconColor[2]),
           ],
           onTap: (index) {

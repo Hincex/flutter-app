@@ -13,7 +13,9 @@ Community _$CommunityFromJson(Map<String, dynamic> json) {
     ..objectId = json['objectId'] as String
     ..ACL = json['ACL'] as Map<String, dynamic>
     ..community_name = json['community_name'] as String
-    ..img = json['img'] as FileImage;
+    ..description = json['description'] as String
+    ..data_name = json['data_name'] as String
+    ..img = json['img'] as String;
 }
 
 Map<String, dynamic> _$CommunityToJson(Community instance) => <String, dynamic>{
@@ -22,5 +24,7 @@ Map<String, dynamic> _$CommunityToJson(Community instance) => <String, dynamic>{
       'objectId': instance.objectId,
       'ACL': instance.ACL,
       'community_name': instance.community_name,
+      'description': instance.description,
+      'data_name': instance.data_name,
       'img': instance.img,
     };

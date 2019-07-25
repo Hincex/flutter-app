@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\Flutter\\MyFlutterTestApp\\build\\data_plugin\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-h720dp-v13\\values-h720dp-v13.xml",
+            "outputFile": "/Users/vincehe/flutter/MyFlutterTestApp/build/data_plugin/intermediates/incremental/mergeReleaseResources/merged.dir/values-h720dp-v13/values-h720dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Vince\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0-beta01.aar\\c4cdd2773702c22a6c131df8b18b099b\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
+                    "source": "/Users/vincehe/.gradle/caches/transforms-2/files-2.1/050d6e89f9e14f7be4351effd9959633/res/values-h720dp-v13/values-h720dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -16,10 +16,10 @@
             ]
         },
         {
-            "outputFile": "E:\\Flutter\\MyFlutterTestApp\\build\\data_plugin\\intermediates\\res\\merged\\release\\values-h720dp-v13\\values-h720dp-v13.xml",
+            "outputFile": "/Users/vincehe/flutter/MyFlutterTestApp/build/data_plugin/intermediates/res/merged/release/values-h720dp-v13/values-h720dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Vince\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0-beta01.aar\\c4cdd2773702c22a6c131df8b18b099b\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
+                    "source": "/Users/vincehe/.gradle/caches/transforms-2/files-2.1/050d6e89f9e14f7be4351effd9959633/res/values-h720dp-v13/values-h720dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -24,24 +24,32 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
   # 全局状态管理
-  provider:  
+  provider: ^3.0.0+1
   # 本地存储
-  shared_preferences: any
+  shared_preferences:
 #  bottom_navy_bar: ^3.0.0
   # 底部导航栏
   curved_navigation_bar: ^0.2.20
-  data_plugin: ^0.0.9
+  data_plugin: ^0.0.12
   # 吐司
-  toast:
+  toast: ^0.1.5
+  # oktoast:
+  # 图片选择器
+  image_picker:
   flutter_picker:
   # 加载动画
-  flutter_spinkit: 
+  flutter_spinkit:
+  # 轮播
+  flutter_swiper:
   # 时间线
   timeline_list: ^0.0.3
   # 设备信息
   device_info:
   # 权限管理
   permission_handler: ^3.1.0
+  # webview
+  # flutter_webview_plugin: ^0.3.4
+  webview_flutter: ^0.3.10+3
 dev_dependencies:
   flutter_test:
     sdk: flutter

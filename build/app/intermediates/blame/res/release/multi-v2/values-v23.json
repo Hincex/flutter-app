@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\Flutter\\MyFlutterTestApp\\build\\app\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-v23\\values-v23.xml",
+            "outputFile": "/Users/vincehe/flutter/MyFlutterTestApp/build/app/intermediates/incremental/mergeReleaseResources/merged.dir/values-v23/values-v23.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Vince\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0-beta01.aar\\c4cdd2773702c22a6c131df8b18b099b\\res\\values-v23\\values-v23.xml",
+                    "source": "/Users/vincehe/.gradle/caches/transforms-2/files-2.1/050d6e89f9e14f7be4351effd9959633/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,19,32,33,34,35,36",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",

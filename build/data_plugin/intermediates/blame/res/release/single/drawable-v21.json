@@ -1,26 +1,26 @@
 [
     {
-        "merged": "E:\\Flutter\\MyFlutterTestApp\\build\\data_plugin\\intermediates\\res\\merged\\release\\drawable-v21\\notification_action_background.xml",
-        "source": "C:\\Users\\Vince\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.0.0-beta01.aar\\c9c85c14a26bc747f9a8ccdee7859c49\\res\\drawable-v21\\notification_action_background.xml"
+        "merged": "/Users/vincehe/flutter/MyFlutterTestApp/build/data_plugin/intermediates/res/merged/release/drawable-v21/abc_action_bar_item_background_material.xml",
+        "source": "/Users/vincehe/.gradle/caches/transforms-2/files-2.1/050d6e89f9e14f7be4351effd9959633/res/drawable-v21/abc_action_bar_item_background_material.xml"
     },
     {
-        "merged": "E:\\Flutter\\MyFlutterTestApp\\build\\data_plugin\\intermediates\\res\\merged\\release\\drawable-v21\\abc_dialog_material_background.xml",
-        "source": "C:\\Users\\Vince\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0-beta01.aar\\c4cdd2773702c22a6c131df8b18b099b\\res\\drawable-v21\\abc_dialog_material_background.xml"
+        "merged": "/Users/vincehe/flutter/MyFlutterTestApp/build/data_plugin/intermediates/res/merged/release/drawable-v21/abc_btn_colored_material.xml",
+        "source": "/Users/vincehe/.gradle/caches/transforms-2/files-2.1/050d6e89f9e14f7be4351effd9959633/res/drawable-v21/abc_btn_colored_material.xml"
     },
     {
-        "merged": "E:\\Flutter\\MyFlutterTestApp\\build\\data_plugin\\intermediates\\res\\merged\\release\\drawable-v21\\abc_list_divider_material.xml",
-        "source": "C:\\Users\\Vince\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0-beta01.aar\\c4cdd2773702c22a6c131df8b18b099b\\res\\drawable-v21\\abc_list_divider_material.xml"
+        "merged": "/Users/vincehe/flutter/MyFlutterTestApp/build/data_plugin/intermediates/res/merged/release/drawable-v21/abc_edit_text_material.xml",
+        "source": "/Users/vincehe/.gradle/caches/transforms-2/files-2.1/050d6e89f9e14f7be4351effd9959633/res/drawable-v21/abc_edit_text_material.xml"
     },
     {
-        "merged": "E:\\Flutter\\MyFlutterTestApp\\build\\data_plugin\\intermediates\\res\\merged\\release\\drawable-v21\\abc_action_bar_item_background_material.xml",
-        "source": "C:\\Users\\Vince\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0-beta01.aar\\c4cdd2773702c22a6c131df8b18b099b\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
+        "merged": "/Users/vincehe/flutter/MyFlutterTestApp/build/data_plugin/intermediates/res/merged/release/drawable-v21/notification_action_background.xml",
+        "source": "/Users/vincehe/.gradle/caches/transforms-2/files-2.1/4dd21bd1c068193a24ce667d765ca163/res/drawable-v21/notification_action_background.xml"
     },
     {
-        "merged": "E:\\Flutter\\MyFlutterTestApp\\build\\data_plugin\\intermediates\\res\\merged\\release\\drawable-v21\\abc_btn_colored_material.xml",
-        "source": "C:\\Users\\Vince\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0-beta01.aar\\c4cdd2773702c22a6c131df8b18b099b\\res\\drawable-v21\\abc_btn_colored_material.xml"
+        "merged": "/Users/vincehe/flutter/MyFlutterTestApp/build/data_plugin/intermediates/res/merged/release/drawable-v21/abc_dialog_material_background.xml",
+        "source": "/Users/vincehe/.gradle/caches/transforms-2/files-2.1/050d6e89f9e14f7be4351effd9959633/res/drawable-v21/abc_dialog_material_background.xml"
     },
     {
-        "merged": "E:\\Flutter\\MyFlutterTestApp\\build\\data_plugin\\intermediates\\res\\merged\\release\\drawable-v21\\abc_edit_text_material.xml",
-        "source": "C:\\Users\\Vince\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0-beta01.aar\\c4cdd2773702c22a6c131df8b18b099b\\res\\drawable-v21\\abc_edit_text_material.xml"
+        "merged": "/Users/vincehe/flutter/MyFlutterTestApp/build/data_plugin/intermediates/res/merged/release/drawable-v21/abc_list_divider_material.xml",
+        "source": "/Users/vincehe/.gradle/caches/transforms-2/files-2.1/050d6e89f9e14f7be4351effd9959633/res/drawable-v21/abc_list_divider_material.xml"
     }
 ]

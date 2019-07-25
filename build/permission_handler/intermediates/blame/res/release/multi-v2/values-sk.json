@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\Flutter\\MyFlutterTestApp\\build\\permission_handler\\intermediates\\res\\merged\\release\\values-sk\\values-sk.xml",
+            "outputFile": "/Users/vincehe/flutter/MyFlutterTestApp/build/permission_handler/intermediates/res/merged/release/values-sk/values-sk.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Vince\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.0.2.aar\\37c8ec18cd117b632fb9b921d16a01f7\\res\\values-sk\\values-sk.xml",
+                    "source": "/Users/vincehe/.gradle/caches/transforms-2/files-2.1/de507be53e569de87482de9cf18c2f1d/res/values-sk/values-sk.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -16,10 +16,10 @@
             ]
         },
         {
-            "outputFile": "E:\\Flutter\\MyFlutterTestApp\\build\\permission_handler\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-sk\\values-sk.xml",
+            "outputFile": "/Users/vincehe/flutter/MyFlutterTestApp/build/permission_handler/intermediates/incremental/mergeReleaseResources/merged.dir/values-sk/values-sk.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Vince\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.0.2.aar\\37c8ec18cd117b632fb9b921d16a01f7\\res\\values-sk\\values-sk.xml",
+                    "source": "/Users/vincehe/.gradle/caches/transforms-2/files-2.1/de507be53e569de87482de9cf18c2f1d/res/values-sk/values-sk.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

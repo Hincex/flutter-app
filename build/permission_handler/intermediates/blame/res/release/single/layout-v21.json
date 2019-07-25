@@ -1,18 +1,18 @@
 [
     {
-        "merged": "E:\\Flutter\\MyFlutterTestApp\\build\\permission_handler\\intermediates\\res\\merged\\release\\layout-v21\\notification_action.xml",
-        "source": "C:\\Users\\Vince\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.0.2.aar\\37c8ec18cd117b632fb9b921d16a01f7\\res\\layout-v21\\notification_action.xml"
+        "merged": "/Users/vincehe/flutter/MyFlutterTestApp/build/permission_handler/intermediates/res/merged/release/layout-v21/notification_template_icon_group.xml",
+        "source": "/Users/vincehe/.gradle/caches/transforms-2/files-2.1/de507be53e569de87482de9cf18c2f1d/res/layout-v21/notification_template_icon_group.xml"
     },
     {
-        "merged": "E:\\Flutter\\MyFlutterTestApp\\build\\permission_handler\\intermediates\\res\\merged\\release\\layout-v21\\notification_template_icon_group.xml",
-        "source": "C:\\Users\\Vince\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.0.2.aar\\37c8ec18cd117b632fb9b921d16a01f7\\res\\layout-v21\\notification_template_icon_group.xml"
+        "merged": "/Users/vincehe/flutter/MyFlutterTestApp/build/permission_handler/intermediates/res/merged/release/layout-v21/notification_template_custom_big.xml",
+        "source": "/Users/vincehe/.gradle/caches/transforms-2/files-2.1/de507be53e569de87482de9cf18c2f1d/res/layout-v21/notification_template_custom_big.xml"
     },
     {
-        "merged": "E:\\Flutter\\MyFlutterTestApp\\build\\permission_handler\\intermediates\\res\\merged\\release\\layout-v21\\notification_action_tombstone.xml",
-        "source": "C:\\Users\\Vince\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.0.2.aar\\37c8ec18cd117b632fb9b921d16a01f7\\res\\layout-v21\\notification_action_tombstone.xml"
+        "merged": "/Users/vincehe/flutter/MyFlutterTestApp/build/permission_handler/intermediates/res/merged/release/layout-v21/notification_action.xml",
+        "source": "/Users/vincehe/.gradle/caches/transforms-2/files-2.1/de507be53e569de87482de9cf18c2f1d/res/layout-v21/notification_action.xml"
     },
     {
-        "merged": "E:\\Flutter\\MyFlutterTestApp\\build\\permission_handler\\intermediates\\res\\merged\\release\\layout-v21\\notification_template_custom_big.xml",
-        "source": "C:\\Users\\Vince\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.0.2.aar\\37c8ec18cd117b632fb9b921d16a01f7\\res\\layout-v21\\notification_template_custom_big.xml"
+        "merged": "/Users/vincehe/flutter/MyFlutterTestApp/build/permission_handler/intermediates/res/merged/release/layout-v21/notification_action_tombstone.xml",
+        "source": "/Users/vincehe/.gradle/caches/transforms-2/files-2.1/de507be53e569de87482de9cf18c2f1d/res/layout-v21/notification_action_tombstone.xml"
     }
 ]

@@ -61,6 +61,7 @@ class SettingsState extends State<Settings> {
     print(image);
     setState(() {
       _imgPath = image;
+      _uploadFile(_imgPath.path);
     });
   }
 
@@ -77,160 +78,167 @@ class SettingsState extends State<Settings> {
     }
   }
 
+  Container userCard(BuildContext context) {
+    return Container(
+      height: 120,
+      margin: EdgeInsets.only(bottom: 10),
+      width: MediaQuery.of(context).size.width,
+      color: GlobalConfig.themeData.primaryColor,
+      child: Stack(
+        // mainAxisAlignment: MainAxisAlignment.start,
+        children: <Widget>[
+          Positioned(
+            top: 10,
+            left: 20,
+            child: CircleAvatar(
+                backgroundImage: _imgPath == null ? null : FileImage(_imgPath),
+                minRadius: 20,
+                maxRadius: 25,
+                child: GestureDetector(
+                    child: _imgPath == null
+                        ? Text(UsrData.usrName[0],
+                            style: TextStyle(fontSize: 25, color: Colors.white))
+                        : null,
+                    // 长按弹出头像选择
+                    onLongPress: () async {
+                      if (await PublicFunc.userLogin() == 1) {
+                        showDialog<Null>(
+                          context: context,
+                          barrierDismissible: true,
+                          builder: (BuildContext context) {
+                            return SimpleDialog(
+                                backgroundColor: GlobalConfig.dark
+                                    ? ThemeData.dark().backgroundColor
+                                    : Colors.white,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(15.0)),
+                                title: Text(
+                                  '上传你的头像',
+                                  style: TextStyle(
+                                      color: GlobalConfig.dark
+                                          ? Colors.white
+                                          : Colors.black),
+                                  textAlign: TextAlign.center,
+                                ),
+                                children: <Widget>[
+                                  ListTile(
+                                    title: Text('拍照',
+                                        style: TextStyle(
+                                            color: GlobalConfig.dark
+                                                ? Colors.white
+                                                : Colors.black)),
+                                    trailing: Icon(Icons.camera),
+                                    onTap: () {
+                                      _takePhoto();
+                                    },
+                                  ),
+                                  ListTile(
+                                    title: Text('图库',
+                                        style: TextStyle(
+                                            color: GlobalConfig.dark
+                                                ? Colors.white
+                                                : Colors.black)),
+                                    trailing: Icon(Icons.photo),
+                                    onTap: () {
+                                      _openGallery();
+                                    },
+                                  ),
+                                ]);
+                          },
+                        );
+                      }
+                    })),
+          ),
+          Positioned(
+            top: 10,
+            left: 80,
+            child: GestureDetector(
+              onTap: () {
+                PublicFunc.navTo('/user', context);
+              },
+              child: Container(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    //用户名
+                    Container(
+                      // margin: EdgeInsets.only(right: 30),
+                      child: Text(
+                        UsrData.usrName,
+                        style: TextStyle(fontSize: 25, color: Colors.white),
+                      ),
+                    ),
+                    //其他
+                    Container(
+                      child: Text(
+                        UsrData.usrJob,
+                        style: TextStyle(fontSize: 12, color: Colors.white),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            // Container(
+            //   child: Icon(Icons.chevron_right),
+            // )
+          )
+        ],
+      ),
+    );
+  }
+
   //个人卡片
   Container infoCard(BuildContext context) {
     return Container(
+        margin: EdgeInsets.fromLTRB(20, 0, 20, 0),
         child: PublicFunc.commonCard(Container(
-      padding: EdgeInsets.all(20.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        // mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: <Widget>[
-          Row(
+          padding: EdgeInsets.all(20.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            // mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
               Container(
-                margin: EdgeInsets.only(right: 40),
-                child: CircleAvatar(
-                    backgroundImage:
-                        _imgPath == null ? null : FileImage(_imgPath),
-                    minRadius: 20,
-                    maxRadius: 25,
-                    child: FlatButton(
-                        padding: EdgeInsets.all(0),
-                        child: _imgPath == null
-                            ? Text(UsrData.usrName[0],
-                                style: TextStyle(
-                                    fontSize: 25, color: Colors.white))
-                            : null,
-                        highlightColor: Colors.transparent,
-                        splashColor: Colors.transparent,
-                        onPressed: () {
-                          showDialog<Null>(
-                            context: context,
-                            barrierDismissible: true,
-                            builder: (BuildContext context) {
-                              return SimpleDialog(
-                                  backgroundColor: GlobalConfig.dark
-                                      ? ThemeData.dark().backgroundColor
-                                      : Colors.white,
-                                  shape: RoundedRectangleBorder(
-                                      borderRadius:
-                                          BorderRadius.circular(15.0)),
-                                  title: Text(
-                                    '上传你的头像',
-                                    style: TextStyle(
-                                        color: GlobalConfig.dark
-                                            ? Colors.white
-                                            : Colors.black),
-                                    textAlign: TextAlign.center,
-                                  ),
-                                  children: <Widget>[
-                                    ListTile(
-                                      title: Text('拍照',
-                                          style: TextStyle(
-                                              color: GlobalConfig.dark
-                                                  ? Colors.white
-                                                  : Colors.black)),
-                                      trailing: Icon(Icons.camera),
-                                      onTap: () {
-                                        _takePhoto();
-                                      },
-                                    ),
-                                    ListTile(
-                                      title: Text('图库',
-                                          style: TextStyle(
-                                              color: GlobalConfig.dark
-                                                  ? Colors.white
-                                                  : Colors.black)),
-                                      trailing: Icon(Icons.photo),
-                                      onTap: () {
-                                        _openGallery();
-                                      },
-                                    ),
-                                  ]);
-                            },
-                          );
-                        })),
-              ),
-              FlatButton(
-                onPressed: () {
-                  PublicFunc.navTo('/user', context);
-                },
-                child: Row(
+                child: Column(
                   children: <Widget>[
-                    Container(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          //用户名
-                          Container(
-                            child: Text(
-                              UsrData.usrName,
-                              style: TextStyle(fontSize: 25),
-                            ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Row(children: <Widget>[
+                          info(
+                            context,
+                            '消息',
+                            '1',
+                            () {
+                              PublicFunc.navTo('/message', context);
+                            },
                           ),
-                          //其他
-                          Container(
-                            child: Text(
-                              UsrData.usrJob,
-                              style: TextStyle(fontSize: 12),
-                            ),
+                          info(
+                            context,
+                            '任务',
+                            '3',
+                            () {
+                              PublicFunc.navTo('/mission', context);
+                            },
                           ),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(left: 60),
-                      child: Icon(Icons.chevron_right),
+                          info(
+                            context,
+                            '奖励',
+                            '10',
+                            () {
+                              PublicFunc.navTo('/announce', context);
+                            },
+                          ),
+                        ]),
+                        // Row()
+                      ],
                     )
                   ],
                 ),
               )
             ],
           ),
-          Container(
-            margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
-            child: Column(
-              children: <Widget>[
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Row(children: <Widget>[
-                      info(
-                        context,
-                        '消息',
-                        '1',
-                        () {
-                          PublicFunc.navTo('/message', context);
-                        },
-                      ),
-                      info(
-                        context,
-                        '任务',
-                        '3',
-                        () {
-                          PublicFunc.navTo('/announce', context);
-                        },
-                      ),
-                      info(
-                        context,
-                        '奖励',
-                        '10',
-                        () {
-                          PublicFunc.navTo('/announce', context);
-                        },
-                      ),
-                    ]),
-                    Row()
-                  ],
-                )
-              ],
-            ),
-          )
-        ],
-      ),
-    )));
+        )));
   }
 
   Container info(
@@ -288,132 +296,139 @@ class SettingsState extends State<Settings> {
 //设置卡片
   Container settingCard(BuildContext context) {
     return Container(
+        margin: EdgeInsets.fromLTRB(20, 0, 20, 0),
         child: PublicFunc.commonCard(
-      Container(
-        padding: EdgeInsets.all(20.0),
-        child: Column(
-          children: <Widget>[
-            //第一排设置
-            Container(
-              margin: EdgeInsets.only(bottom: 10),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  //通知公告
-                  settingButton(
-                    context,
-                    '通知公告',
-                    CircleAvatar(
-                      radius: 20.0,
-                      child: Icon(Icons.book,
-                          color:
-                              GlobalConfig.dark ? Colors.green : Colors.white),
-                      backgroundColor:
-                          GlobalConfig.dark ? Colors.white : Colors.green,
-                    ),
-                    () {
-                      PublicFunc.navTo('/announce', context);
-                    },
+          Container(
+            padding: EdgeInsets.all(20.0),
+            child: Column(
+              children: <Widget>[
+                //第一排设置
+                Container(
+                  margin: EdgeInsets.only(bottom: 10),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      //通知公告
+                      settingButton(
+                        context,
+                        '通知公告',
+                        CircleAvatar(
+                          radius: 20.0,
+                          child: Icon(Icons.book,
+                              color: GlobalConfig.dark
+                                  ? Colors.green
+                                  : Colors.white),
+                          backgroundColor:
+                              GlobalConfig.dark ? Colors.white : Colors.green,
+                        ),
+                        () {
+                          PublicFunc.navTo('/announce', context);
+                        },
+                      ),
+                      //开发团队
+                      settingButton(
+                        context,
+                        '开发团队',
+                        CircleAvatar(
+                          radius: 20.0,
+                          child: Icon(Icons.person,
+                              color: GlobalConfig.dark
+                                  ? Colors.black
+                                  : Colors.white),
+                          backgroundColor:
+                              GlobalConfig.dark ? Colors.white : Colors.black,
+                        ),
+                        () {
+                          PublicFunc.navTo('/team', context);
+                        },
+                      ),
+                      //意见反馈
+                      settingButton(
+                        context,
+                        '意见反馈',
+                        CircleAvatar(
+                          radius: 20.0,
+                          child: Icon(Icons.info,
+                              color: GlobalConfig.dark
+                                  ? Colors.purple
+                                  : Colors.white),
+                          backgroundColor:
+                              GlobalConfig.dark ? Colors.white : Colors.purple,
+                        ),
+                        () {
+                          PublicFunc.navTo('/advice', context);
+                        },
+                      ),
+                    ],
                   ),
-                  //开发团队
-                  settingButton(
-                    context,
-                    '开发团队',
-                    CircleAvatar(
-                      radius: 20.0,
-                      child: Icon(Icons.person,
-                          color:
-                              GlobalConfig.dark ? Colors.black : Colors.white),
-                      backgroundColor:
-                          GlobalConfig.dark ? Colors.white : Colors.black,
-                    ),
-                    () {
-                      PublicFunc.navTo('/team', context);
-                    },
-                  ),
-                  //意见反馈
-                  settingButton(
-                    context,
-                    '意见反馈',
-                    CircleAvatar(
-                      radius: 20.0,
-                      child: Icon(Icons.info,
-                          color:
-                              GlobalConfig.dark ? Colors.purple : Colors.white),
-                      backgroundColor:
-                          GlobalConfig.dark ? Colors.white : Colors.purple,
-                    ),
-                    () {
-                      PublicFunc.navTo('/advice', context);
-                    },
-                  ),
-                ],
-              ),
-            ),
-            //第二排设置
+                ),
+                //第二排设置
 
-            Container(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  //主题切换
-                  settingButton(
-                    context,
-                    '主题风格',
-                    CircleAvatar(
-                      radius: 20.0,
-                      child: Icon(Icons.color_lens,
-                          color:
-                              GlobalConfig.dark ? Colors.pink : Colors.white),
-                      backgroundColor:
-                          GlobalConfig.dark ? Colors.white : Colors.pink,
-                    ),
-                    () {
-                      selectTheme(context);
-                    },
+                Container(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      //主题切换
+                      settingButton(
+                        context,
+                        '主题风格',
+                        CircleAvatar(
+                          radius: 20.0,
+                          child: Icon(Icons.color_lens,
+                              color: GlobalConfig.dark
+                                  ? Colors.pink
+                                  : Colors.white),
+                          backgroundColor:
+                              GlobalConfig.dark ? Colors.white : Colors.pink,
+                        ),
+                        () {
+                          selectTheme(context);
+                        },
+                      ),
+                      //夜间模式切换
+                      settingButton(
+                        context,
+                        GlobalConfig.dark ? '夜间模式' : '日间模式',
+                        CircleAvatar(
+                          radius: 20.0,
+                          child: Icon(
+                              GlobalConfig.dark
+                                  ? Icons.brightness_2
+                                  : Icons.brightness_5,
+                              color: GlobalConfig.dark
+                                  ? Colors.orange
+                                  : Colors.white),
+                          backgroundColor:
+                              GlobalConfig.dark ? Colors.white : Colors.orange,
+                        ),
+                        () {
+                          themeMode(context);
+                        },
+                      ),
+                      //检查更新
+                      settingButton(
+                        context,
+                        "检查更新",
+                        CircleAvatar(
+                          radius: 20.0,
+                          child: Icon(Icons.update,
+                              color: GlobalConfig.dark
+                                  ? Colors.blue
+                                  : Colors.white),
+                          backgroundColor:
+                              GlobalConfig.dark ? Colors.white : Colors.blue,
+                        ),
+                        () {
+                          PublicFunc.navTo('/update', context);
+                        },
+                      ),
+                    ],
                   ),
-                  //夜间模式切换
-                  settingButton(
-                    context,
-                    GlobalConfig.dark ? '夜间模式' : '日间模式',
-                    CircleAvatar(
-                      radius: 20.0,
-                      child: Icon(
-                          GlobalConfig.dark
-                              ? Icons.brightness_2
-                              : Icons.brightness_5,
-                          color:
-                              GlobalConfig.dark ? Colors.orange : Colors.white),
-                      backgroundColor:
-                          GlobalConfig.dark ? Colors.white : Colors.orange,
-                    ),
-                    () {
-                      themeMode(context);
-                    },
-                  ),
-                  //检查更新
-                  settingButton(
-                    context,
-                    "检查更新",
-                    CircleAvatar(
-                      radius: 20.0,
-                      child: Icon(Icons.update,
-                          color:
-                              GlobalConfig.dark ? Colors.blue : Colors.white),
-                      backgroundColor:
-                          GlobalConfig.dark ? Colors.white : Colors.blue,
-                    ),
-                    () {
-                      PublicFunc.navTo('/update', context);
-                    },
-                  ),
-                ],
-              ),
-            )
-          ],
-        ),
-      ),
-    ));
+                )
+              ],
+            ),
+          ),
+        ));
   }
 
   _buildConfirmCode(BuildContext context) {
@@ -520,61 +535,64 @@ class SettingsState extends State<Settings> {
   //下方设置卡片
   Container bottomCard(BuildContext context) {
     return Container(
+        margin: EdgeInsets.fromLTRB(20, 0, 20, 0),
         child: PublicFunc.commonCard(Container(
-      padding: EdgeInsets.all(20),
-      child: Column(
-        children: <Widget>[
-          ListTile(
-            title: Text('身份认证'),
-            subtitle: Text('进行身份认证'),
-            //之前显示icon
-            leading: Icon(Icons.adjust, color: SettingConfig.cardIconColor),
-            trailing: Icon(Icons.chevron_right),
-            onTap: () async {
-              // 未登录则跳转登录
-              if (await PublicFunc.userLogin() != 1) {
-                Toast.show("请先登录账号!", context,
-                    duration: Toast.LENGTH_SHORT, gravity: Toast.CENTER);
-                PublicFunc.navTo('/login', context);
-              } else {
-                SharedPreferences prefs = await SharedPreferences.getInstance();
-                bool confirm = prefs.getBool('confirm');
-                if (confirm != null && confirm == false) {
-                  _buildConfirmCode(context);
-                } else {
-                  // showToast('你已认证过',position:ToastPosition.bottom);
-                  Toast.show('你已认证过!', context,
-                      duration: Toast.LENGTH_SHORT, gravity: Toast.CENTER);
-                }
-                // PublicFunc.navTo('/identity', context);
-              }
-            },
+          padding: EdgeInsets.all(20),
+          child: Column(
+            children: <Widget>[
+              ListTile(
+                title: Text('身份认证'),
+                subtitle: Text('进行身份认证'),
+                //之前显示icon
+                leading: Icon(Icons.adjust, color: SettingConfig.cardIconColor),
+                trailing: Icon(Icons.chevron_right),
+                onTap: () async {
+                  // 未��录则跳转登录
+                  if (await PublicFunc.userLogin() != 1) {
+                    Toast.show("请先登录账号!", context,
+                        duration: Toast.LENGTH_SHORT, gravity: Toast.CENTER);
+                    PublicFunc.navTo('/login', context);
+                  } else {
+                    SharedPreferences prefs =
+                        await SharedPreferences.getInstance();
+                    bool confirm = prefs.getBool('confirm');
+                    if (confirm != null && confirm == false) {
+                      _buildConfirmCode(context);
+                    } else {
+                      // showToast('你已认证过',position:ToastPosition.bottom);
+                      Toast.show('你已认证过!', context,
+                          duration: Toast.LENGTH_SHORT, gravity: Toast.CENTER);
+                    }
+                    // PublicFunc.navTo('/identity', context);
+                  }
+                },
+              ),
+              ListTile(
+                title: Text('小工具包'),
+                subtitle: Text('电气常用工具'),
+                //之前显示icon
+                leading: Icon(Icons.developer_mode,
+                    color: SettingConfig.cardIconColor),
+                trailing: Icon(Icons.chevron_right),
+                onTap: () {
+                  // getUserName();
+                  // PublicFunc.navTo('/user', context);
+                },
+              ),
+              ListTile(
+                title: Text('设置中心'),
+                //之前显示icon
+                leading:
+                    Icon(Icons.settings, color: SettingConfig.cardIconColor),
+                trailing: Icon(Icons.chevron_right),
+                onTap: () {
+                  // getUserName();
+                  PublicFunc.navTo('/user', context);
+                },
+              ),
+            ],
           ),
-          ListTile(
-            title: Text('小工具包'),
-            subtitle: Text('电气常用工具'),
-            //之前显示icon
-            leading:
-                Icon(Icons.developer_mode, color: SettingConfig.cardIconColor),
-            trailing: Icon(Icons.chevron_right),
-            onTap: () {
-              // getUserName();
-              // PublicFunc.navTo('/user', context);
-            },
-          ),
-          ListTile(
-            title: Text('设置中心'),
-            //之前显示icon
-            leading: Icon(Icons.settings, color: SettingConfig.cardIconColor),
-            trailing: Icon(Icons.chevron_right),
-            onTap: () {
-              // getUserName();
-              PublicFunc.navTo('/user', context);
-            },
-          ),
-        ],
-      ),
-    )));
+        )));
   }
 
   @override
@@ -588,9 +606,23 @@ class SettingsState extends State<Settings> {
             centerTitle: true,
             elevation: 0.0,
           ),
-          body: ListView(padding: EdgeInsets.all(20), children: [
+          body: ListView(children: [
             //个人卡片
-            infoCard(context),
+            Container(
+              margin: EdgeInsets.only(bottom: 50),
+              child: Stack(
+                overflow: Overflow.visible,
+                children: <Widget>[
+                  userCard(context),
+                  Positioned(
+                    left: 0.0,
+                    right: 0.0,
+                    top: 75.0,
+                    child: infoCard(context),
+                  )
+                ],
+              ),
+            ),
             //设置卡片
             settingCard(context),
             //下方设置卡片
@@ -627,7 +659,7 @@ void setTheme(index, BuildContext context) {
 
 //选择主题
 void selectTheme(BuildContext context) {
-  //主题选择对话框
+  //主题��择对话框
   showDialog<Null>(
     context: context,
     barrierDismissible: true,

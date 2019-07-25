@@ -35,19 +35,25 @@ class HomeState extends State<Home> with SingleTickerProviderStateMixin {
               centerTitle: true,
               elevation: 0.0,
               leading: IconButton(
+                splashColor: Colors.transparent,
+                highlightColor: Colors.transparent,
                 icon: Icon(Icons.menu),
                 tooltip: '菜单',
                 onPressed: () {},
               ),
               actions: <Widget>[
                 IconButton(
-                    icon: Icon(Icons.search), tooltip: '搜索', onPressed: () {}),
+                    splashColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    icon: Icon(Icons.search),
+                    tooltip: '搜索',
+                    onPressed: () {}),
               ],
               bottom: TabBar(
-                indicatorColor: GlobalConfig.themeData.primaryColor,
+                indicatorColor: Colors.white,
                 //生成Tab菜单
                 controller: _tabController,
-                // tabs: tabs.map((e) => Tab(Icon: e)).toList()),
+                // tabs: tsabs.map((e) => Tab(Icon: e)).toList()),
                 isScrollable: false,
                 indicatorSize: TabBarIndicatorSize.label,
                 labelPadding: EdgeInsets.only(bottom: 5),
@@ -59,13 +65,6 @@ class HomeState extends State<Home> with SingleTickerProviderStateMixin {
               )),
           body: TabBarView(
             controller: _tabController,
-            // children: tabs.map((e) {
-            //   //创建3个Tab页
-            //   return Container(
-            //     alignment: Alignment.center,
-            //     child: Text(e, textScaleFactor: 5),
-            //   );
-            // }).toList()),
             children: <Widget>[Index(), Second(), Third()],
           ),
           floatingActionButton: FloatingActionButton(
