@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 //页面
 import '../home/home.dart';
-import '../my/my.dart';
 import '../club/club.dart';
 import '../settings/settings.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
@@ -75,67 +74,3 @@ class NavState extends State<Nav> with TickerProviderStateMixin {
     );
   }
 }
-
-//BottomNavyBar(
-//backgroundColor: GlobalConfig.dark?GlobalConfig.darkMode.bottomAppBarColor:GlobalConfig.lightMode.bottomAppBarColor,
-////设置当前页面索引
-//onItemSelected: (index) => setState(() {
-//currentIndex = index;
-//}),
-//items: [
-//BottomNavyBarItem(
-//icon: Icon(Icons.apps),
-//title: Text('首页'),
-//activeColor: GlobalConfig.themeData.primaryColor,
-//inactiveColor: Colors.black,
-//),
-//BottomNavyBarItem(
-//icon: Icon(Icons.people),
-//title: Text('我的'),
-//activeColor: GlobalConfig.themeData.primaryColor,
-//inactiveColor: Colors.black,
-//),
-//BottomNavyBarItem(
-//icon: Icon(Icons.message),
-//title: Text('社区'),
-//activeColor: GlobalConfig.themeData.primaryColor,
-//inactiveColor: Colors.black,
-//),
-//BottomNavyBarItem(
-//icon: Icon(Icons.settings),
-//title: Text('设置'),
-//activeColor: GlobalConfig.themeData.primaryColor,
-//inactiveColor: Colors.black,
-//),
-//],
-//)
-//   bottomNavigationBar: BottomNavyBar(
-//     backgroundColor: GlobalConfig.dark?GlobalConfig.darkMode.bottomAppBarColor:GlobalConfig.lightMode.bottomAppBarColor,
-//     iconSize: 24.0,
-//     //设置当前的索引
-//     onItemSelected: (index) => setState(() {
-//           currentIndex = index;
-//         }),
-//     items: [
-//       BottomNavyBarItem(
-//           icon: Icon(Icons.apps),
-//           title: Text('首页'),
-//           activeColor: Colors.red,
-//           inactiveColor: Colors.grey),
-//       BottomNavyBarItem(
-//           icon: Icon(Icons.people),
-//           title: Text('我的'),
-//           activeColor: Colors.purpleAccent,
-//           inactiveColor: Colors.grey),
-//       BottomNavyBarItem(
-//           icon: Icon(Icons.message),
-//           title: Text('社区'),
-//           activeColor: Colors.pink,
-//           inactiveColor: Colors.grey),
-//       BottomNavyBarItem(
-//           icon: Icon(Icons.settings),
-//           title: Text('设置'),
-//           activeColor: Colors.blue,
-//           inactiveColor: Colors.grey)
-//   ],
-// )

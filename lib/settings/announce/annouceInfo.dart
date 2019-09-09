@@ -7,6 +7,9 @@ import 'package:data_plugin/bmob/bmob_query.dart';
 import '../../data/announce.dart';
 import 'package:data_plugin/utils/dialog_util.dart';
 import 'package:data_plugin/bmob/response/bmob_error.dart';
+import '../../util/loading_util.dart';
+import 'package:provider/provider.dart';
+import '../../store/model/index.dart';
 
 class AnnounceInfo extends StatefulWidget {
   @override
@@ -80,7 +83,7 @@ class AnnounceInfoState extends State<AnnounceInfo> {
     BmobQuery<Announce> query = BmobQuery();
     query.queryObjects().then((data) {
       PublicFunc.loading = false;
-      setState(() {});
+      Provider.of<ThemeChange>(context).setState();
       // showSuccess(context, data.toString());
       List<Announce> msgs = data.map((i) => Announce.fromJson(i)).toList();
       for (Announce msg in msgs) {
@@ -102,17 +105,6 @@ class AnnounceInfoState extends State<AnnounceInfo> {
     });
   }
 
-  //列表项
-  ListTile listItem(
-      String title, String subtitle, Widget leftIcon, Widget rightIcon) {
-    return ListTile(
-      title: Text('$title'),
-      subtitle: Text('$subtitle'),
-      leading: leftIcon,
-      trailing: rightIcon,
-    );
-  }
-
   @override
   void initState() {
     super.initState();
@@ -127,6 +119,23 @@ class AnnounceInfoState extends State<AnnounceInfo> {
   }
 
   Widget mainScreen(BuildContext context) {
+    return Loading(
+      child: Container(
+        margin: EdgeInsets.fromLTRB(20, 0, 20, 0),
+        child: Column(
+          children: <Widget>[
+            Flexible(
+              child: ListView.builder(
+                reverse: false,
+                itemBuilder: (_, int index) => _messages[index],
+                itemCount: _messages.length,
+              ),
+            )
+          ],
+        ),
+      ),
+      title: Text('加载中'),
+    );
     return new PublicFunc().show(
         context,
         Container(

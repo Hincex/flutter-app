@@ -5,7 +5,6 @@ import './nav/nav.dart';
 import 'global_config.dart' show GlobalConfig;
 import 'package:provider/provider.dart';
 import 'store/model/index.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 //路由列表
 import 'settings/team/team.dart';
 import 'settings/advice/advice.dart';
@@ -17,41 +16,23 @@ import 'settings/register/register.dart';
 import 'settings/reset/reset_user_by_email.dart';
 import 'settings/userPage/userPage.dart';
 import 'settings/settings.dart';
-import './data/userData.dart';
 import './settings/userPage/message.dart';
 import './settings/userPage/mission.dart';
 import './club/club_page.dart';
 import './club/club_detail.dart';
 //Bmob后端云
 import 'package:data_plugin/bmob/bmob.dart';
-
-Future<int> getTheme() async {
-  SharedPreferences pref = await SharedPreferences.getInstance();
-  int themeIndex = pref.getInt("localTheme");
-  if (pref.getString('user_name') != null)
-    UsrData.usrName = pref.getString('user_name');
-  if (pref.getString('user_job') != null)
-    UsrData.usrJob = pref.getString('user_job');
-  if (pref.getString('user_id') != null)
-    UsrData.usrId = pref.getString('user_id');
-  if (pref.getBool('isGrid') != null) UsrData.isGrid = pref.getBool('isGrid');
-  // print(themeIndex);
-  if (themeIndex != null) {
-    GlobalConfig.themeData = GlobalConfig.themes[themeIndex];
-    GlobalConfig.tempThemeData = GlobalConfig.themes[themeIndex];
-    return themeIndex;
-  } else {
-    GlobalConfig.themeData = GlobalConfig.themes[1];
-  }
-  return 0;
-}
+import './util/usrSetting_util.dart';
 
 void main() async {
-  await getTheme();
+//  获取用户本地设置
+  await UsrSettingUtil.getUsrSetting();
+//  执行第一次通知
   runApp(ChangeNotifierProvider<ThemeChange>.value(
     value: ThemeChange(GlobalConfig.themeData),
     child: MyApp(),
   ));
+//  安卓端设置沉浸
   if (Platform.isAndroid) {
     // 以下两行 设置android状态栏为透明的沉浸。写在组件渲染之后，是为了在渲染后进行set赋值，覆盖状态栏，写在渲染之前MaterialApp组件会覆盖掉这个值。
     SystemUiOverlayStyle systemUiOverlayStyle =

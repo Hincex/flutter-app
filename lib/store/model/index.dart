@@ -5,6 +5,7 @@ import '../../global_config.dart';
 import '../../settings/settings_config.dart' show SettingConfig;
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../data/userData.dart';
+import '../../util/avatar_util.dart';
 
 class ThemeChange with ChangeNotifier {
   //初始主题
@@ -29,21 +30,17 @@ class ThemeChange with ChangeNotifier {
     notifyListeners();
   }
 
-  //通知获得的初始主题
-  get indexTheme => _indexTheme;
-}
-
-class UserData with ChangeNotifier {
-  //存储用户名
-  String usrName = UsrData.usrName;
-  UserData(this.usrName);
-  dynamic getUserData() async {
-    SharedPreferences pref = await SharedPreferences.getInstance();
-    usrName = pref.getString('user_name');
+  void avatarChange(image) {
+    AvatarUtil.imgPath = image;
     //通知consumer
     notifyListeners();
-    return usrName;
   }
+
+  void setState() {
+    //通知consumer
+    notifyListeners();
+  }
+
   //通知获得的初始主题
-  // get usrName => _usrName;
+  get indexTheme => _indexTheme;
 }

@@ -51,6 +51,8 @@ class ClubState extends State<Club> with TickerProviderStateMixin {
   bool show = false;
   int _index;
   int _tempindex;
+  IconData _actionIcon = Icons.menu;
+
   //横向的卡片信息
   Container info(
       String img, String title, String description, String data, int index) {
@@ -255,19 +257,32 @@ class ClubState extends State<Club> with TickerProviderStateMixin {
                 ),
               ),
               actions: <Widget>[
-                IconButton(
-                  icon: UsrData.isGrid ? Icon(Icons.apps) : Icon(Icons.menu),
-                  highlightColor: Colors.transparent,
-                  splashColor: Colors.transparent,
-                  onPressed: () async {
-                    setState(() {
-                      UsrData.isGrid = !UsrData.isGrid;
-                    });
-                    SharedPreferences prefs =
-                        await SharedPreferences.getInstance();
-                    prefs.setBool('isGrid', UsrData.isGrid);
+                AnimatedSwitcher(
+                  duration: const Duration(milliseconds: 300),
+                  transitionBuilder:
+                      (Widget child, Animation<double> animation) {
+                    return ScaleTransition(
+                        child: FadeTransition(opacity: animation, child: child),
+                        scale: animation);
                   },
-                )
+                  child: IconButton(
+                    key: ValueKey(_actionIcon),
+                    highlightColor: Colors.transparent,
+                    splashColor: Colors.transparent,
+                    icon: Icon(_actionIcon),
+                    onPressed: () async {
+                      setState(() {
+                        UsrData.isGrid = !UsrData.isGrid;
+                        UsrData.isGrid
+                            ? _actionIcon = Icons.apps
+                            : _actionIcon = Icons.menu;
+                      });
+                      SharedPreferences prefs =
+                          await SharedPreferences.getInstance();
+                      prefs.setBool('isGrid', UsrData.isGrid);
+                    },
+                  ),
+                ),
               ]),
           body: ListView(
             padding: EdgeInsets.all(20),

@@ -1,9 +1,7 @@
-import 'package:data_plugin/bmob/bmob.dart';
 import 'package:data_plugin/bmob/bmob_query.dart';
 import 'package:data_plugin/bmob/bmob_utils.dart';
 import 'package:data_plugin/bmob/response/bmob_error.dart';
 import 'package:data_plugin/bmob/response/bmob_saved.dart';
-import 'package:data_plugin/bmob/table/bmob_user.dart';
 import 'package:data_plugin/utils/dialog_util.dart';
 import 'package:flutter/material.dart';
 import 'package:toast/toast.dart';

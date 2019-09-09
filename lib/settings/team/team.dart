@@ -1,9 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../../global_config.dart' show GlobalConfig; //全局设置
-import '../settings_config.dart';
 import '../../public_func/PublicFunc.dart';
 import 'package:device_info/device_info.dart';
+import '../../widget/ListItem.dart';
+import '../../widget/CardColumn.dart';
 
 class Team extends StatefulWidget {
   @override
@@ -11,17 +11,6 @@ class Team extends StatefulWidget {
 }
 
 class TeamState extends State<Team> {
-  //列表项
-  Widget listItem(
-      String title, String subtitle, Widget leftIcon, Widget rightIcon) {
-    return ListTile(
-      title: Text('$title'),
-      subtitle: Text('$subtitle'),
-      leading: leftIcon,
-      trailing: rightIcon,
-    );
-  }
-
   Future deviceInfo() async {
     DeviceInfoPlugin deviceInfo = DeviceInfoPlugin();
     // AndroidDeviceInfo androidInfo = await deviceInfo.androidInfo;
@@ -85,22 +74,26 @@ class TeamState extends State<Team> {
                   Positioned(
                     left: 0.0,
                     right: 0.0,
-                    top: 60.0,
-                    child: Container(
+                    top: 80.0,
+                    child: CardColumn(
                       height: 240,
-                      margin: EdgeInsets.all(20),
-                      child: PublicFunc.commonCard(Column(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          listItem('作者', 'Vince He', Icon(Icons.offline_bolt),
-                              Icon(Icons.chevron_right)),
-                          listItem('UI设计', '李丽莎', Icon(Icons.palette),
-                              Icon(Icons.chevron_right)),
-                          listItem('特别鸣谢', 'Google Inc.', Icon(Icons.pages),
-                              Icon(Icons.chevron_right))
-                        ],
-                      )),
+                      children: [
+                        ListItem(
+                          title: Text('作者'),
+                          subtitle: Text('Vince He'),
+                          leading: Icon(Icons.offline_bolt),
+                        ),
+                        ListItem(
+                          title: Text('UI设计'),
+                          subtitle: Text('李丽莎'),
+                          leading: Icon(Icons.palette),
+                        ),
+                        ListItem(
+                          title: Text('特别鸣谢'),
+                          subtitle: Text('Google Inc.'),
+                          leading: Icon(Icons.pages),
+                        )
+                      ],
                     ),
                   )
                 ],
